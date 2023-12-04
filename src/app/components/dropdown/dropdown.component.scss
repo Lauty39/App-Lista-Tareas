@@ -32,13 +32,18 @@ $select_height: 40px;
             transition-duration: 0.3s;
             filter: brightness(1.5);
         }
+        
+    }
+
+    .options-container {
+        position: relative; /* Nuevo contenedor relativo para cada elemento */
+        margin-top: $select_height;
     }
 
     .options {
-        position: fixed;
+        position: absolute;
         display: flex;
         flex-direction: column;
-        margin-top: $select_height;
         width: $select_width;
         max-height: 200px;
         overflow-y: auto;
@@ -68,8 +73,6 @@ $select_height: 40px;
                 font-weight: bold;
             }
         }
-
-
     }
 
     .options::-webkit-scrollbar {
